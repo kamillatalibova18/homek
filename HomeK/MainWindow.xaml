@@ -1,0 +1,76 @@
+﻿<Window x:Class="HomeK.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HomeK"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="63*"/>
+            <ColumnDefinition Width="1130*"/>
+        </Grid.ColumnDefinitions>
+        <Rectangle HorizontalAlignment="Left" Height="581" Margin="504,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="241" Grid.Column="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFBADBE9" Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Rectangle HorizontalAlignment="Left" Height="581" Margin="17,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="247" Grid.Column="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFAAE2AB" Offset="1"/>
+                    <GradientStop Color="#FFA6DDA7" Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Помещение " HorizontalAlignment="Left" Margin="32,63,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" Grid.Column="2"/>
+        <Label Content="Длина" HorizontalAlignment="Left" Margin="32,127,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Width="64" RenderTransformOrigin="1.276,1.015" Grid.Column="2"/>
+        <Label Content="Ширина" HorizontalAlignment="Left" Margin="32,195,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Grid.Column="2"/>
+        <TextBox x:Name="TBLengthR" HorizontalAlignment="Left" Margin="140,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <TextBox x:Name="TBWidthR" HorizontalAlignment="Left" Margin="140,195,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <Label Content="Помещение " HorizontalAlignment="Left" Margin="530,63,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" Grid.Column="2"/>
+        <Label Content="Длина" HorizontalAlignment="Left" Margin="530,122,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Width="64" Grid.Column="2"/>
+        <Label Content="Ширина" HorizontalAlignment="Center" Margin="0,190,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Grid.Column="2"/>
+        <Label Content="Число розеток" HorizontalAlignment="Left" Margin="530,261,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Grid.Column="2" RenderTransformOrigin="0.405,0.6"/>
+        <TextBox x:Name="TBLengthO" HorizontalAlignment="Left" Margin="638,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <TextBox x:Name="TBWidthO" HorizontalAlignment="Left" Margin="638,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <TextBox x:Name="TBNumS" HorizontalAlignment="Left" Margin="638,261,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" RenderTransformOrigin="1.032,1.056" Grid.Column="2"/>
+        <Rectangle HorizontalAlignment="Left" Height="581" Margin="745,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="348" Grid.Column="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFAAAAB0" Offset="1"/>
+                    <GradientStop Color="#FF616165" Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Список помещений" HorizontalAlignment="Left" Margin="761,63,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" Grid.Column="2"/>
+        <Label x:Name="ListRooms" Grid.Column="2" Content="Label" HorizontalAlignment="Left" Margin="761,117,0,0" VerticalAlignment="Top" Height="157" Width="274"/>
+        <Button x:Name="BAddRoom" Content="Добавить " HorizontalAlignment="Left" Margin="42,671,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="14" Click="BAddRoom_Click" Grid.Column="2"/>
+        <Button x:Name="BAddLivingRoom" Content="Добавить " HorizontalAlignment="Left" Margin="300,671,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="14" Click="BAddLivingRoom_Click" Grid.Column="2"/>
+        <Button x:Name="BAddOffice" Content="Добавить " HorizontalAlignment="Left" Margin="540,671,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="14" Grid.Column="2" Click="BAddOffice_Click" RenderTransformOrigin="1.068,2.491"/>
+        <Button x:Name="BGetList" Content="Выдать" HorizontalAlignment="Left" Margin="853,665,0,0" VerticalAlignment="Top" Height="38" Width="182" FontSize="14" Grid.Column="2" Click="BGetList_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="581" Margin="257,49,0,0" Stroke="Black" VerticalAlignment="Top" Width="247" Grid.Column="2">
+            <Rectangle.Fill>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black"/>
+                    <GradientStop Color="#FFADADE5" Offset="0"/>
+                </LinearGradientBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+        <Label Content="Жилое помещение" HorizontalAlignment="Left" Margin="269,63,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold" FontFamily="Arial Rounded MT Bold" Width="166" Grid.Column="2"/>
+        <Label Content="Длина" HorizontalAlignment="Left" Margin="269,122,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Width="64" Grid.Column="2"/>
+        <Label Content="Ширина" HorizontalAlignment="Left" Margin="271,190,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Grid.Column="2"/>
+        <TextBox x:Name="TBLengthL" HorizontalAlignment="Left" Margin="391,127,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <TextBox x:Name="TBWidthL" HorizontalAlignment="Left" Margin="391,190,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" Grid.Column="2"/>
+        <Label Content="Число окон" HorizontalAlignment="Left" Margin="264,243,0,0" VerticalAlignment="Top" FontSize="14" FontFamily="Arial" Grid.Column="2"/>
+        <TextBox x:Name="TBNumW_Copy" HorizontalAlignment="Left" Margin="391,248,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="84" Height="26" RenderTransformOrigin="1.032,1.056" Grid.Column="2"/>
+
+    </Grid>
+</Window>
